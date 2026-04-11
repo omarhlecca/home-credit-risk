@@ -1,0 +1,31 @@
+# ── Data & Pipeline
+pandas==2.2.0
+numpy==1.26.0
+sqlalchemy==2.0.25
+pymysql==1.1.0
+apache-airflow==2.8.1
+
+# ── ML
+scikit-learn==1.4.0
+xgboost==2.0.3
+lightgbm==4.3.0
+optuna==3.5.0
+shap==0.44.0
+scorecardpy==0.1.9.6
+
+# ── Deep Learning
+torch==2.2.0
+
+# ── Experiment tracking
+mlflow==2.10.0
+
+# ── Notebooks & viz
+jupyter==1.0.0
+matplotlib==3.8.2
+seaborn==0.13.2
+plotly==5.18.0
+
+# ── Quality & testing
+pytest==7.4.4
+flake8==7.0.0
+great-expectations==0.18.8
