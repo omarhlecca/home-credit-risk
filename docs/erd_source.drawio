@@ -1,0 +1,73 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram name="Page-1" id="dE6DblIKfeh1n_Stn_4Y">
+    <mxGraphModel dx="1426" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F1FB;strokeColor=#378ADD;fontStyle=1;fontSize=12;verticalAlign=top;align=center;fontFamily=Helvetica;" value="application_{train|test}.csv&lt;hr/&gt;&lt;font style=&#39;font-size:10px&#39;&gt;PK: SK_ID_CURR&lt;br/&gt;TARGET (binary - solo train)&lt;br/&gt;122 columnas | 307k+48k filas&lt;br/&gt;Info del cliente y prestamo&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="260" x="300" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAEEDA;strokeColor=#BA7517;fontStyle=1;fontSize=12;verticalAlign=top;align=center;fontFamily=Helvetica;" value="bureau.csv&lt;hr/&gt;&lt;font style=&#39;font-size:10px&#39;&gt;PK: SK_BUREAU_ID&lt;br/&gt;FK: SK_ID_CURR&lt;br/&gt;17 columnas | 1.7M filas&lt;br/&gt;Creditos externos del cliente&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="230" x="40" y="355" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEEDFE;strokeColor=#7F77DD;fontStyle=1;fontSize=12;verticalAlign=top;align=center;fontFamily=Helvetica;" value="previous_application.csv&lt;hr/&gt;&lt;font style=&#39;font-size:10px&#39;&gt;PK: SK_ID_PREV&lt;br/&gt;FK: SK_ID_CURR&lt;br/&gt;37 columnas | 1.67M filas&lt;br/&gt;Apps anteriores en Home Credit&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="260" x="550" y="325" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAEEDA;strokeColor=#BA7517;fontStyle=1;fontSize=12;verticalAlign=top;align=center;fontFamily=Helvetica;" value="bureau_balance.csv&lt;hr/&gt;&lt;font style=&#39;font-size:10px&#39;&gt;FK: SK_BUREAU_ID&lt;br/&gt;3 columnas | 27.3M filas&lt;br/&gt;Balance mensual creditos externos&lt;br/&gt;Behavioral data&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="230" x="40" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF3DE;strokeColor=#639922;fontStyle=1;fontSize=12;verticalAlign=top;align=center;fontFamily=Helvetica;" value="POS_CASH_balance.csv&lt;hr/&gt;&lt;font style=&#39;font-size:10px&#39;&gt;FK: SK_ID_PREV&lt;br/&gt;FK: SK_ID_CURR (directo)&lt;br/&gt;8 columnas | 10M filas&lt;br/&gt;Balance mensual POS y cash&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="230" x="300" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF3DE;strokeColor=#639922;fontStyle=1;fontSize=12;verticalAlign=top;align=center;fontFamily=Helvetica;" value="installments_payments.csv&lt;hr/&gt;&lt;font style=&#39;font-size:10px&#39;&gt;FK: SK_ID_PREV&lt;br/&gt;FK: SK_ID_CURR (directo)&lt;br/&gt;8 columnas | 13.6M filas&lt;br/&gt;Historial de pagos de cuotas&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="240" x="560" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF3DE;strokeColor=#639922;fontStyle=1;fontSize=12;verticalAlign=top;align=center;fontFamily=Helvetica;" value="credit_card_balance.csv&lt;hr/&gt;&lt;font style=&#39;font-size:10px&#39;&gt;FK: SK_ID_PREV&lt;br/&gt;FK: SK_ID_CURR (directo)&lt;br/&gt;23 columnas | 3.84M filas&lt;br/&gt;Balance mensual tarjetas&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="230" x="830" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="10" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#BA7517;strokeWidth=1.5;fontSize=10;fontFamily=Courier New;fontColor=#854F0B;endArrow=ERmany;startArrow=ERone;exitX=0;exitY=0.5;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontStyle=1" target="3" value="SK_ID_CURR">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="11" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#7F77DD;strokeWidth=1.5;fontSize=10;fontFamily=Courier New;fontColor=#534AB7;endArrow=ERmany;startArrow=ERone;exitX=1;exitY=0.5;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontStyle=1" target="4" value="SK_ID_CURR">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="12" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#BA7517;strokeWidth=1.5;fontSize=10;fontFamily=Courier New;fontColor=#854F0B;endArrow=ERmany;startArrow=ERone;exitX=0.5;exitY=1;entryX=0.5;entryY=0;fontStyle=1" target="5" value="SK_BUREAU_ID">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="13" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#639922;strokeWidth=1.5;fontSize=10;fontFamily=Courier New;fontColor=#3B6D11;endArrow=ERmany;startArrow=ERone;exitX=0;exitY=0.5;entryX=0.5;entryY=0;exitDx=0;exitDy=0;fontStyle=1" target="6" value="SK_ID_PREV">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="14" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#639922;strokeWidth=1.5;fontSize=10;fontFamily=Courier New;fontColor=#3B6D11;endArrow=ERmany;startArrow=ERone;exitX=0.5;exitY=1;entryX=0.5;entryY=0;fontStyle=1" target="7" value="SK_ID_PREV">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="15" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#639922;strokeWidth=1.5;fontSize=10;fontFamily=Courier New;fontColor=#3B6D11;endArrow=ERmany;startArrow=ERone;exitX=1;exitY=0.5;entryX=0.5;entryY=0;exitDx=0;exitDy=0;fontStyle=1" target="8" value="SK_ID_PREV">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="16" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#888780;strokeWidth=1;dashed=1;fontSize=9;fontFamily=Courier New;fontColor=#888780;endArrow=open;startArrow=none;entryX=0.176;entryY=0.004;entryDx=0;entryDy=0;exitX=0.152;exitY=1.004;exitDx=0;exitDy=0;exitPerimeter=0;entryPerimeter=0;fontStyle=1" target="6" value="SK_ID_CURR">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="341" y="265" />
+            </Array>
+            <mxPoint x="300" y="265" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="17" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#888780;strokeWidth=1;dashed=1;fontSize=9;fontFamily=Courier New;fontColor=#888780;endArrow=open;startArrow=none;exitX=0.75;exitY=1;entryX=0.085;entryY=0.015;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;fontStyle=1" target="7" value="SK_ID_CURR">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="495" y="505" />
+              <mxPoint x="580" y="505" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="18" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#888780;strokeWidth=1;dashed=1;fontSize=9;fontFamily=Courier New;fontColor=#888780;endArrow=open;startArrow=none;exitX=1.004;exitY=0.155;entryX=0.828;entryY=-0.009;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;fontStyle=1" target="8" value="SK_ID_CURR">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1020" y="172" />
+              <mxPoint x="1020" y="584" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
