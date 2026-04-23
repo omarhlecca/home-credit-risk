@@ -17,12 +17,12 @@ RUN apt-get update && apt-get install -y \
 
 USER airflow
 
-# Dependencias Python
+# Solo dependencias adicionales — sin fijar versiones
+# que Airflow ya maneja internamente
 RUN pip install --no-cache-dir \
-    apache-airflow-providers-mysql==3.4.0 \
-    mysqlclient==2.2.0 \
-    pymysql==1.1.0 \
-    sqlalchemy==2.0.25 \
-    pandas==2.2.0 \
-    numpy==1.26.0 \
-    mlflow==2.10.0
+    apache-airflow-providers-mysql \
+    mysqlclient \
+    pymysql \
+    pandas \
+    numpy \
+    mlflow

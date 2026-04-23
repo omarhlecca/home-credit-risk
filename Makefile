@@ -13,13 +13,13 @@ setup:
 	@echo ".env creado. Edita los valores antes de ejecutar make up"
 
 up:
-	docker compose -f docker/docker-compose.yml up -d
+	docker compose --env-file .env -f docker/docker-compose.yml up -d
 
 down:
-	docker compose -f docker/docker-compose.yml down
+	docker compose --env-file .env -f docker/docker-compose.yml down
 
 logs:
-	docker compose -f docker/docker-compose.yml logs -f
+	docker compose --env-file .env -f docker/docker-compose.yml logs -f
 
 test:
 	pytest tests/ -v
