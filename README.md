@@ -1,4 +1,6 @@
 # Home Credit Default Risk - Data Pipeline & ML
+[![CI](https://github.com/omarhlecca/home-credit-risk/actions/workflows/ci.yml/badge.svg)](https://github.com/omarhlecca/home-credit-risk/actions/workflows/ci.yml)
+![Python](https://img.shields.io/badge/python-3.11-blue)
 
 End-to-end data engineering and machine learning project based on the
 [Home Credit Default Risk](https://www.kaggle.com/c/home-credit-default-risk) Kaggle dataset.
