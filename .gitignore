@@ -55,3 +55,6 @@ airflow/logs/
 
 # ── Docker
 docker/mysql/data/
+
+# ── IDEs y herramientas
+**/*.bkp
